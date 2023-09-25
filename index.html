@@ -39,17 +39,22 @@
 						</ul>
 						<aside class="notes">
 							Благодаря командной работе были определены и внедрены автоматические инструменты управлением репозиторием и контролю за выполнению заданиями, автоматическому тестированию. Благодаря созданию разных папок в дискорд ответственных за разные направления разработки и написанию важных инструкций, были исключены потенциальные ошибки и неудобства при работе, также отсутствовали разногласия об формате написания различных частей кода.
-
 						</aside>
 					</section>
 					<section>Примеры</section>
 					<section>
 						<p>Создание стандартного сниппета для веб компонентов</p>
 						<img src="./assets/images/Web-component-snippet.png">
+						<aside class="notes">
+							Это помогло всем членам команде писать код веб компонентов в едином стиле.
+						</aside>
 					</section>
 					<section>
 						<p>Cогласование единых правил код ревью, требований к оформлению PullRequest</p>
 						<img src="./assets/images/Pull-request-example.png">
+						<aside class="notes">
+							Каждый пулл реквест четко описывал, что он делал, содержал ссылки на задания и список выполненых пунктов. Мерж пул реквестов проводился только после двух аппрувов, что обеспечивало минимизацию ошибок и высокий уровень понимания кода у всех участников.
+						</aside>
 					</section>
 					<section>
 						<p>Реализация Redux. Согласовали вместе структуру данных, обеспечивающую бесперебойную работу приложения.</p>
@@ -185,9 +190,99 @@
 				<section>
 					<section>3. Техническая основа и практика GitHub</section>
 					<section>Аналитика GitHub</section>
+					<section>
+						<h4>Вклад в разработку, за исключением коммитов слияния и аккаунтов ботов</h4>
+						<img src="./assets/images/github/contributors.jpg" alt="contributors" width="600" height="550">
+					</section>
+					<section>
+						<h4>Интенсивность добавления комитов</h4>
+						<img src="./assets/images/github/commits.jpg" alt="commits" width="450" height="200">
+					</section>
+					<section>
+						<h4>Частота удалений / добавлений кода за всю историю существования rs-bunch/ecommerce-application</h4>
+						<img src="./assets/images/github/frequency.jpg" alt="frequency" width="600" height="475">
+					</section>
+					<section>Метрики Jira</section>
+					<section>
+						<h4>Отчет о выгорании (2 спринт)</h4>
+						<img src="./assets/images/burnup.png" alt="burnup" width="600" height="470">
+					</section>
+					<section>
+						<h4>Кумулятивная потоковая диаграмма (весь проект)</h4>
+						<img src="./assets/images/cumulative.png" alt="cumulative" width="600" height="300">
+					</section>
+					
 					<section>Пример Pull Request и сопутствующего обзора кода</section>
-					<section>Документация README</section>
+					<section>
+						<img src="./assets/images/pr1.jpg" alt="pull-request1" width="600" height="475">
+					</section>
+					<section>
+						<img src="./assets/images/pr2.jpg" alt="pull-request1" width="600" height="400">
+					</section>
+					<section>
+						<h4>Документация README</h4>
+					</section>
+					<section>
+						<p>
+							Общая инструкция по описанию и настройке проекта содержится в файле README в корневом каталоге репозитория.
+						</p>
+						<img src="./assets/images/scripts.jpg" alt="start" width="400" height="300">
+						<img src="./assets/images/start.jpg" alt="start" width="400" height="150">
+					</section>
+					<section>
+						<p>
+							Также командой использовалась документация в виде описания и инструкций, которые команда для удобства доступа хранит в соответствующих папках канала разработки в дискорд
+						</p>
+						<img src="./assets/images/instruction.png" alt="instruction" width="600px" height="200px">
+					</section>
+					<section>
+						<p>
+							Данные инструкции содержат основные договоренности по написанию кода, именованию переменных, инструкции для различных сценариев
+						</p>
+						<img src="./assets/images/instruction2.png" alt="instruction" width="450px" height="400px">
+					</section>
 					<section>Обзор технологического стека </section>
+					<section>
+						<p>
+							Командой было решено использовать, для разработки SPA-приложения, технологию Веб-компонентов. Основной причиной послужило желание участников команде поглубже разобраться в данной тематике, а также наличие у некоторых участников практических навыков работы с ними.
+						</p>
+					</section>
+					<section>
+						<ul>
+							<li class="fragment">Webpack - сборщик модулей JavaScript с открытым исходным кодом</li>
+							<li class="fragment">Typescript - типизированная надстройка над JS</li>
+							<li class="fragment">В качестве роутера был разработан компонент, отслеживающий загрузку страницы, а также перемещение по истории и состояние адресной строки</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li class="fragment">
+								Для управления состоянием различных частей проекта мы решили использовать Redux-Toolkit.
+							</li>
+							<li class="fragment">
+								В качестве взаимодействия с API CommerceTools было принято решение использовать SDK CommerceTools 
+							</li>
+							<li class="fragment">
+								bootstrap - свободный набор инструментов для создания сайтов и веб-приложений
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li class="fragment">
+								toastify - легковесная библиотека уведомлений на JS.
+							</li>
+							<li class="fragment">
+								husky - библиотека для создания git хуков
+							</li>
+							<li class="fragment">
+								jest - библиотека для модульного тестирования
+							</li>
+							<li class="fragment">
+								eslint - инструмент статического анализа кода для выявления проблемных шаблонов, найденных в коде JavaScript
+							</li>
+						</ul>
+					</section>
 				</section>
 			</div>
 		</div>

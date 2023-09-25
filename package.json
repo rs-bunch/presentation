@@ -10,7 +10,7 @@
   "scripts": {
     "test": "gulp test",
     "start": "gulp serve",
-    "build": "gulp build"
+    "build": "gulp build",
   },
   "author": {
     "name": "Hakim El Hattab",
@@ -100,5 +100,8 @@
       "no-eq-null": 2,
       "no-unused-expressions": 0
     }
+  },
+  "dependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
